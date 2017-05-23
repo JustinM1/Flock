@@ -72,7 +72,7 @@ public struct SupervisordConfFile {
     }
     
     func toString() -> String {
-        let config = [
+        var config = [
             "[program:\(programName)]",
             "command=\(command)",
             "process_name=\(processName)",
@@ -81,6 +81,14 @@ public struct SupervisordConfFile {
             "stdout_logfile=\(stdoutLogfile)",
             "stderr_logfile=\(stderrLogfile)"
         ] + extraLines + [""]
+      if let env = Config.environmentVariables {
+        var variables: [String] = []
+        for (key, value) in env {
+          variables.append("\(key)=\(value)")
+        }
+        let vars = variables.joined(separator: ",")
+        config.insert("environment=\(vars)", at: 2)
+      }
         return config.joined(separator: "\n")
     }
     

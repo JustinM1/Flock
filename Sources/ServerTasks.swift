@@ -27,6 +27,7 @@ public extension Config {
     
     static var supervisordName: String? = nil
     static var supervisordUser: String? = nil
+    static var environmentVariables: [String: String]? = nil
 }
 
 class DefaultSupervisordProvider: SupervisordProvider {
