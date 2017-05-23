@@ -106,7 +106,7 @@ public class SupervisordTask: Task {
         let persmissionsMatcher = OutputMatcher(regex: "Permission denied:") { (match) in
             print("Make sure this user has the ability to run supervisorctl commands -- see https://github.com/jakeheis/Flock#permissions".yellow)
         }
-        try server.executeWithOutputMatchers("supervisorctl \(command)", matchers: [persmissionsMatcher])
+        try server.executeWithOutputMatchers("sudo supervisorctl \(command)", matchers: [persmissionsMatcher])
     }
     
 }
