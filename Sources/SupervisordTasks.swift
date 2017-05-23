@@ -91,7 +91,7 @@ public class SupervisordTask: Task {
     public var name: String { return "" }
     public var hookTimes: [HookTime] { return [] }
     public let namespace: String
-    let provider: SupervisordProvider
+    public let provider: SupervisordProvider
     
     public init(provider: SupervisordProvider) {
         self.namespace = provider.taskNamespace
