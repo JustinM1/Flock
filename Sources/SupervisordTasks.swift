@@ -93,7 +93,7 @@ public class SupervisordTask: Task {
     public let namespace: String
     let provider: SupervisordProvider
     
-    init(provider: SupervisordProvider) {
+    public init(provider: SupervisordProvider) {
         self.namespace = provider.taskNamespace
         self.provider = provider
     }
