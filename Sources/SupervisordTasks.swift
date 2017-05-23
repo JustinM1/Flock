@@ -37,7 +37,7 @@ public extension SupervisordProvider {
         return "/etc/supervisor/conf.d/\(supervisordName).conf"
     }
     
-    func createTasks() -> [Task] {
+    public func createTasks() -> [Task] {
         return [
             DependenciesTask(provider: self),
             WriteConfTask(provider: self),
@@ -86,11 +86,11 @@ public struct SupervisordConfFile {
     
 }
 
-class SupervisordTask: Task {
+public class SupervisordTask: Task {
     
-    var name: String { return "" }
-    var hookTimes: [HookTime] { return [] }
-    let namespace: String
+    public var name: String { return "" }
+    public var hookTimes: [HookTime] { return [] }
+    public let namespace: String
     let provider: SupervisordProvider
     
     init(provider: SupervisordProvider) {
@@ -98,7 +98,7 @@ class SupervisordTask: Task {
         self.provider = provider
     }
     
-    func run(on server: Server) throws {
+    public func run(on server: Server) throws {
         throw TaskError.commandFailed
     }
     
