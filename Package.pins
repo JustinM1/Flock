@@ -2,12 +2,6 @@
   "autoPin": true,
   "pins": [
     {
-      "package": "CNMSSH",
-      "reason": null,
-      "repositoryURL": "https://github.com/jakeheis/CNMSSH",
-      "version": "1.0.2"
-    },
-    {
       "package": "CSSH",
       "reason": null,
       "repositoryURL": "https://github.com/jakeheis/CSSH",
@@ -18,6 +12,18 @@
       "reason": null,
       "repositoryURL": "https://github.com/onevcat/Rainbow",
       "version": "2.0.1"
+    },
+    {
+      "package": "SSH",
+      "reason": null,
+      "repositoryURL": "https://github.com/jakeheis/SSH",
+      "version": "0.0.3"
+    },
+    {
+      "package": "Socket",
+      "reason": null,
+      "repositoryURL": "https://github.com/IBM-Swift/BlueSocket",
+      "version": "0.12.49"
     },
     {
       "package": "Spawn",
