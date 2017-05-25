@@ -37,6 +37,7 @@ public func == (lhs: ConfigurationTime, rhs: ConfigurationTime) -> Bool {
 // MARK: - Config
 
 public struct Config {}
+public typealias FlockConfig = Config
 
 // MARK: -
 
